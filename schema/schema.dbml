@@ -1,0 +1,79 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table badesaison {
+  BADEGEWAESSERID text [primary key]
+  SAISONBEGINN text [primary key]
+  SAISONENDE text
+  GESCHLOSSEN text
+}
+
+Table einstufung {
+  BADEGEWAESSERID text [primary key]
+  BEURTEILUNGSZEITRAUM_VON integer [primary key]
+  BEURTEILUNGSZEITRAUM_BIS integer [primary key]
+  EINSTUFUNG_ODER_VORABBEWERTUNG text [primary key]
+}
+
+Table infrastruktur {
+  BADEGEWAESSERID text [primary key]
+  INFRASTRUKTURID integer [primary key]
+  INFRASTRUKTUR text 
+}
+
+Table messungen {
+  BADEGEWAESSERID text [primary key]
+  MESSSTELLENNAME text
+  MESSSTELLENID text
+  UEBERWACHUNGSARTID integer
+  UEBERWASCHUNGSARTTEXT text
+  GEWAESSERKATEGORIE text
+  KUESTENGEWAESSER text
+  PROBEID integer [primary key]
+  DATUMMESSUNG text
+  PROBENART text
+  ECOLI integer
+  INTEST_ENTEROKOKKEN integer
+  WASSERTEMP integer
+  LUFTTEMP integer
+  SICHTTIEFE real
+  BEMERKUNG text
+}
+
+Table stammdaten {
+  BADEGEWAESSERID text [primary key]
+  BADEGEWAESSERNAME text
+  KURZNAME text
+  ALLGEMEIN_GEBRAEUCHL_NAME text
+  GEWAESSERKATEGORIE text
+  KUESTENGEWAESSER text
+  BADEGEWAESSERTYP text
+  WEITEREBESCHREIBUNG text
+  BADESTELLENLAENGE integer
+  EUANMELDUNG text
+  EUABMELDUNG text
+  FLUSSGEBIETSEINHEITID integer
+  FLUSSGEBIETSEINHEITNAME text
+  WASSERKOERPERID text
+  WASSERKOERPERNAME text
+  NATWASSERKOERPERID text
+  NATWASSERKOERPERNAME text
+  SCHLUESSELWOERTER text
+  KREISNR integer
+  KREIS text
+  GEMEINDENR integer
+  GEMEINDE text
+  UTM_OST integer
+  UTM_NORD integer
+  GEOGR_LAENGE integer
+  GEOGR_BREITE integer
+  BADESTELLENINFORMATION text
+  AUSWIRKUNGEN_AUF_BADEGEWAESSER text
+  MOEGLICHEBELASTUNGEN text
+}
+
+
+Ref: stammdaten.BADEGEWAESSERID < badesaison.BADEGEWAESSERID
+Ref: stammdaten.BADEGEWAESSERID < einstufung.BADEGEWAESSERID
+Ref: stammdaten.BADEGEWAESSERID < infrastruktur.BADEGEWAESSERID
+Ref: stammdaten.BADEGEWAESSERID < messungen.BADEGEWAESSERID
