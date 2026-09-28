@@ -22,10 +22,10 @@ Der Datensatz umfasst mehrere miteinander verknüpfte Tabellen:
 
 ## Quellen
 
-GovData: Badegewässer - Einstufung https://www.govdata.de/suche/daten/badegewasser-einstufung78c89
-GovData: Badegewässer - Infrastruktur https://www.govdata.de/suche/daten/badegewasser-infrastruktur
-GovData: Badegewässer - Messungen https://www.govdata.de/suche/daten/badegewasser-messungen79f84
-GovData: Badegewässer - Saisondauer https://www.govdata.de/suche/daten/badegewasser-saisondauer
+GovData: Badegewässer - Einstufung https://www.govdata.de/suche/daten/badegewasser-einstufung78c89 <br>
+GovData: Badegewässer - Infrastruktur https://www.govdata.de/suche/daten/badegewasser-infrastruktur <br>
+GovData: Badegewässer - Messungen https://www.govdata.de/suche/daten/badegewasser-messungen79f84 <br>
+GovData: Badegewässer - Saisondauer https://www.govdata.de/suche/daten/badegewasser-saisondauer <br>
 GovData: Badegewässer - Stammdaten https://www.govdata.de/suche/daten/badegewasser-stammdaten6e34f
 
 Abrufdatum: 25.09.2026
